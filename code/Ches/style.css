@@ -1,0 +1,40 @@
+#board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+
+.square {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+/* Add a background color to indicate the color of each square */
+.square-1, .square-3, .square-5, .square-7,
+.square-9, .square-11, .square-13, .square-15 {
+  background-color: #fff;
+}
+
+.square-2, .square-4, .square-6, .square-8,
+.square-10, .square-12, .square-14, .square-16,
+.square-17, .square-19, .square-21, .square-23,
+.square-25, .square-27, .square-29, .square-31,
+.square-33, .square-35, .square-37, .square-39,
+.square-41, .square-43, .square-45, .square-47,
+.square-49, .square-51, .square-53, .square-55,
+.square-57, .square-59, .square-61, .square-63 {
+  background-color: #000;
+}
+
+/* Add a chess piece to each square as needed */
+.square-1 .piece {
+  content: '♜';
+}
+
+.square-2 .piece {
+  content: '♞';
+}
+
+<!-- ... -->

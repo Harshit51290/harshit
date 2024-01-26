@@ -1,0 +1,37 @@
+# Here is a simple example of a login interface using the tkinter library in Python
+import tkinter as tk
+
+def login():
+    username = username_entry.get()
+    password = password_entry.get()
+    
+    # Add your own authentication logic here
+    if username == "user" and password == "password":
+        login_result.config(text="Login successful")
+    else:
+        login_result.config(text="Invalid username or password")
+
+root = tk.Tk()
+root.title("Login")
+
+# Username label and entry
+username_label = tk.Label(root, text="Username:")
+username_label.pack()
+username_entry = tk.Entry(root)
+username_entry.pack()
+
+# Password label and entry
+password_label = tk.Label(root, text="Password:")
+password_label.pack()
+password_entry = tk.Entry(root, show="*")
+password_entry.pack()
+
+# Login button
+login_button = tk.Button(root, text="Login", command=login)
+login_button.pack()
+
+# Login result
+login_result = tk.Label(root, text="")
+login_result.pack()
+
+root.mainloop()

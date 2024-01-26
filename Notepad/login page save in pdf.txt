@@ -1,0 +1,49 @@
+import tkinter as tk
+from fpdf import FPDF
+
+def save_as_pdf():
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=12)
+    pdf.cell(200, 10, txt="Password: " + password_entry.get(), ln=True)
+    pdf.cell(200, 10, txt="Username: " + username_entry.get(), ln=True)
+    pdf.output("login_info.pdf")
+
+def login():
+    username = username_entry.get()
+    password = password_entry.get()
+    
+    if not username or not password:
+        if not username:
+            login_result.config(text="Please enter username", fg="red")
+        else:
+            login_result.config(text="Please enter password", fg="red")
+    else:
+        # Add your own authentication logic here
+        login_result.config(text="Login successful", fg="green")
+        save_as_pdf()
+
+root = tk.Tk()
+root.title("Improved Login Interface")
+
+# Username label and entry
+username_label = tk.Label(root, text="Username:", font=("Arial", 16))
+username_label.pack()
+username_entry = tk.Entry(root, font=("Arial", 12))
+username_entry.pack()
+
+# Password label and entry
+password_label = tk.Label(root, text="Password:", font=("Arial", 14))
+password_label.pack()
+password_entry = tk.Entry(root, show="*", font=("Arial", 12))
+password_entry.pack()
+
+# Login button
+login_button = tk.Button(root, text="Login", command=login, font=("Arial", 12), bg="lightblue")
+login_button.pack()
+
+# Login result
+login_result = tk.Label(root, text="", font=("Arial", 12))
+login_result.pack()
+
+root.mainloop()

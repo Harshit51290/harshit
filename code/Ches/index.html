@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chess Game</title>
+  <style>
+    /* Define the size and style of the board */
+    .board {
+      width: 400px;
+      height: 400px;
+      margin: 20px auto;
+      display: grid;
+      grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+      border: 4px solid black;
+    }
+
+    /* Define the colors of the squares */
+    .white {
+      background-color: white;
+    }
+
+    .black {
+      background-color: gray;
+    }
+
+    /* Define the size and style of the pieces */
+    .piece {
+      width: 40px;
+      height: 40px;
+      margin: auto;
+      font-size: 36px;
+      text-align: center;
+      line-height: 40px;
+    }
+
+    /* Define the colors and symbols of the pieces */
+    .white-piece {
+      color: white;
+    }
+
+    .black-piece {
+      color: black;
+    }
+
+    .pawn {
+      content: "♙";
+    }
+
+    .rook {
+      content: "♖";
+    }
+
+    .knight {
+      content: "♘";
+    }
+
+    .bishop {
+      content: "♗";
+    }
+
+    .queen {
+      content: "♕";
+    }
+
+    .king {
+      content: "♔";
+    }
+  </style>
+</head>
+<body>
+  <!-- Create the board using div elements -->
+  <div class="board">
+    <!-- First row -->
+    <div class="black">
+      <div class="piece white-piece rook"></div>
+    </div>
+    <div class="white">
+      <div class="piece white-piece knight"></div>
+    </div>
+    <div class="black">
+      <div class="piece white-piece bishop"></div>
+    </div>
+    <div class="white">
+      <div class="piece white-piece queen"></div>
+    </div>
+    <div class="black">
+      <div class="piece white-piece king"></div>
+    </div>
+    <div class="white">
+      <div class="piece white-piece bishop"></div>
+    </div>
+    <div class="black">
+      <div class="piece white-piece knight"></div>
+    </div>
+    <div class="white">
+      <div class="piece white-piece rook"></div>
+    </div>
+    <!-- Second row -->
+    <div class="white">
+      <div class="piece white-piece pawn"></div>
+    </div>
+    <div class="black">
+      <div class="piece white-piece pawn"></div>
+    </div>
+    <div class="white">
+      <div class="piece white-piece pawn"></div>
+    </div>
+    <div class="black">
+      <div class="piece white-piece pawn"></div>
+    </div>
+    <div class="white">
+      <div class="piece white-piece pawn"></div>
+    </div>
+    <div class="black">
+      <div class="piece white-piece pawn"></div>
+    </div>
+    <div class="white">
+      <div class="piece white-piece pawn"></div>
+    </div>
+    <div class="black">
+      <div class="piece white-piece pawn"></div>
+    </div>
+    <!-- Third row -->
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <!-- Fourth row -->
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <!-- Fifth row -->
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <!-- Sixth row -->
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    <!-- Seventh row -->
+    <div class="black">
+      <div class="piece black-piece pawn"></div>
+    </div>
+    <div class="white">
+      <div class="piece black-piece pawn"></div>
+    </div>
+    <div class="black">
+      <div class="piece black-piece pawn"></div>
+    </div>
+    <div class="white">
+      <div class="piece black-piece pawn"></div>
+    </div>
+    <div class="black">
+      <div class="piece black-piece pawn"></div>
+    </div>
+    <div class="white">
+      <div class="piece black-piece pawn"></div>
+    </div>
+    <div class="black">
+      <div class="piece black-piece pawn"></div>
+    </div>
+    <div class="white">
+      <div class="piece black-piece pawn"></div>
+    </div>
+    <!-- Eighth row -->
+    <div class="white">
+      <div class="piece black-piece rook"></div>
+    </div>
+    <div class="black">
+      <div class="piece black-piece knight"></div>
+    </div>
+    <div class="white">
+      <div class="piece black-piece bishop"></div>
+    </div>
+    <div class="black">
+      <div class="piece black-piece queen"></div>
+    </div>
+    <div class="white">
+      <div class="piece black-piece king"></div>
+    </div>
+    <div class="black">
+      <div class="piece black-piece bishop"></div>
+    </div>
+    <div class="white">
+      <div class="piece black-piece knight"></div>
+    </div>
+    <div class="black">
+      <div class="piece black-piece rook"></div>
+    </div>
+    <div id="board">
+      <!-- Add a div for each square on the board, with a class indicating its position -->
+      <div class="square square-1"></div>
+      <div class="square square-2"></div>
+      <!-- ... -->
+      <div class="square square-64"></div>
+    </div>
+  </div>
+</body>
+</html>
